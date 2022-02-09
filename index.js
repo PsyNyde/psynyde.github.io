@@ -7,6 +7,6 @@ console.log(`meow :3
 
 function play() {
     const audio = document.querySelector("audio");
-    audio.volume = 0.5;
+    audio.volume = 0.3;
     audio.paused ? audio.play() : audio.pause();
     }
