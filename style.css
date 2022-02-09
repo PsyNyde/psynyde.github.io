@@ -6,7 +6,7 @@ body {
   height: 100%;
   padding: 0px;
 }
-.test {
+.text {
   -webkit-animation: squiggly-anim 0.34s linear infinite;
   animation: squiggly-anim 0.34s linear infinite;
 }
@@ -14,7 +14,7 @@ body {
   background: #111;
   color: #fff;
 }
-.test {
+.text {
   position: absolute;
   left: 50%;
   top: 50%;
