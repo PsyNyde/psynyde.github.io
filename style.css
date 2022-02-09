@@ -32,6 +32,11 @@ body {
 p {
   margin: 0;
 }
+svg{
+  height: 100%;
+  width: 100%;
+}
+
 @-webkit-keyframes squiggly-anim {
   0% {
     filter: url("#squiggly-0");
