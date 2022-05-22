@@ -18,8 +18,8 @@ body {
   animation: squiggly-anim 0.34s linear infinite;
 }
 body {
-  background: #111;
-  color: #fff;
+  background: #151515;
+  color: #d0d0d0;
 }
 .text {
   cursor: pointer;
