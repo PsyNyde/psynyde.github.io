@@ -94,7 +94,8 @@ h3 {
 
 .projects {
 	margin: 1em;
-	display: grid
+	display: grid;
+        padding-bottom:2.5em;
 }
 
 .fire {
