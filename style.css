@@ -1,82 +1,223 @@
+*,
 body {
-  font-family: "Amatic SC", sans-serif;
-  font-size: clamp(3.5rem, 6vw, 6rem);
-  margin: 0px;
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-.text {
-  -webkit-animation: squiggly-anim 0.34s linear infinite;
-  animation: squiggly-anim 0.34s linear infinite;
-}
-body {
-  background: #151515;
-  color: #d0d0d0;
-}
-.text {
-  cursor: pointer;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-  line-height: 1;
-  white-space: nowrap;
-}
-.small {
-  font-size: 0.5em;
-}
-.smaller {
-  font-size: 0.4em;
-}
-p {
-  margin: 0;
-}
-svg{
-  height: 100%;
-  width: 100%;
+	margin: 0;
+	padding: 0
 }
 
-@-webkit-keyframes squiggly-anim {
-  0% {
-    filter: url("#squiggly-0");
-  }
-  25% {
-    filter: url("#squiggly-1");
-  }
-  50% {
-    filter: url("#squiggly-2");
-  }
-  75% {
-    filter: url("#squiggly-3");
-  }
-  100% {
-    filter: url("#squiggly-4");
-  }
+.socials,
+h2,
+h3,
+h4 {
+	color: #f0f0f0
 }
-@keyframes squiggly-anim {
-  0% {
-    filter: url("#squiggly-0");
-  }
-  25% {
-    filter: url("#squiggly-1");
-  }
-  50% {
-    filter: url("#squiggly-2");
-  }
-  75% {
-    filter: url("#squiggly-3");
-  }
-  100% {
-    filter: url("#squiggly-4");
-  }
+
+* {
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none
+}
+
+a {
+	text-decoration: none;
+	color: inherit
+}
+
+.socials {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	font-size: 1.25rem;
+	padding: 1em 2em
+}
+
+h4 {
+	font-size: 1.2rem;
+	padding-bottom: .5em
+}
+
+.project-holder {
+	margin-bottom: .75em;
+	border-radius: 15px;
+	background: #151515;
+	box-shadow: 13px 13px 25px #0e0e0e, -13px -13px 25px #1c1c1c
+}
+
+.fire,
+.fire>div {
+	border-radius: 100%
+}
+
+.project-holder div {
+	padding: 1em;
+	height: 80%;
+	width: 80%
+}
+
+body {
+	background-color: #151515;
+	height: 100%;
+	width: 100%
+}
+
+.logo-container {
+	display: flex;
+	justify-content: center;
+	margin-top: 2em
+}
+
+.heading p {
+	padding-top: .5em
+}
+
+p {
+	color: #d0d0d0;
+	font-size: 1rem
+}
+
+h2 {
+	font-size: 2rem
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin: .5em 0
+}
+
+.heading {
+	text-align: center;
+	margin-top: 2em
+}
+
+.projects {
+	margin: 1em;
+	display: grid
+}
+
+.fire {
+	position: relative;
+	width: 12em;
+	height: 12em;
+	overflow: hidden;
+	filter: url(#fire-blur)
+}
+
+.fire>div {
+	position: absolute;
+	left: 12%;
+	bottom: 0;
+	width: 5em;
+	height: 5em;
+	background: 0 0;
+	animation-fill-mode: backwards;
+	animation-name: firecircle;
+	animation-duration: 1.2s;
+	animation-timing-function: cubic-bezier(0.5, 0.07, 0.64, 1);
+	animation-iteration-count: infinite;
+	will-change: transform, background-color
+}
+
+.fire>div:first-child {
+	animation-delay: .14s;
+	margin-left: .8em;
+	margin-bottom: -1em
+}
+
+.fire>div:nth-child(2) {
+	animation-delay: .28s;
+	margin-left: 1.1em;
+	margin-bottom: -1.8em
+}
+
+.fire>div:nth-child(3) {
+	animation-delay: .42s;
+	margin-left: 3.8em;
+	margin-bottom: -1.8em
+}
+
+.fire>div:nth-child(4) {
+	animation-delay: .56s;
+	margin-left: 1.8em;
+	margin-bottom: -2.1em
+}
+
+.fire>div:nth-child(5) {
+	animation-delay: .7s;
+	margin-left: 3.8em;
+	margin-bottom: -2.1em
+}
+
+.fire>div:nth-child(6) {
+	animation-delay: .84s;
+	margin-left: 3.3em;
+	margin-bottom: -1em
+}
+
+.fire>div:nth-child(7) {
+	animation-delay: .98s;
+	margin-left: 4em;
+	margin-bottom: -2.2em
+}
+
+.fire>div:nth-child(8) {
+	animation-delay: 1.12s;
+	margin-left: .1em;
+	margin-bottom: -1.5em
+}
+
+.fire>div:nth-child(9) {
+	animation-delay: 1.26s;
+	margin-left: 4.2em;
+	margin-bottom: -2em
+}
+
+.fire>div:nth-child(10) {
+	animation-delay: 1.4s;
+	margin-left: 1.8em;
+	margin-bottom: -2.2em
+}
+
+.fire>div:nth-child(11) {
+	animation-delay: 1.54s;
+	margin-left: 3.8em;
+	margin-bottom: -2.2em
+}
+
+.fire>div:nth-child(12) {
+	animation-delay: 1.68s;
+	margin-left: .2em;
+	margin-bottom: -2em
+}
+
+.fire>div:nth-child(13) {
+	animation-delay: 1.82s;
+	margin-left: .1em;
+	margin-bottom: -2.1em
+}
+
+.fire>div:nth-child(14) {
+	animation-delay: 1.96s;
+	margin-left: 2.1em;
+	margin-bottom: -2.1em
+}
+
+.fire>div:nth-child(15) {
+	animation-delay: 2.1s;
+	margin-left: .9em;
+	margin-bottom: -1.6em
+}
+
+@keyframes firecircle {
+	0% {
+		transform: translateY(0) scale(1);
+		background: hsl(0deg, 70%, 60%)
+	}
+
+	100% {
+		transform: translateY(-11em) scale(0);
+		background: hsl(50deg, 100%, 80%)
+	}
 }
