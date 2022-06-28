@@ -1,52 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
-    <title>meow :3</title>
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<link rel=stylesheet href=style.css>
+<title>meow :3</title>
 </head>
 <body>
-    <div class="text" onclick="play()">
-        This could be
-        <p class="small">– the day – <p/>
-        I die for you
-        <p class="small">(or even tomorrow)</p>
-        <p class="smaller">(or never idk ;-;)</p>
-      </div>
-      <audio src="dieforyou.mp3"></audio>
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-        <defs>
-      
-          
-          <filter id="squiggly-0">
-            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/>
-            <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
-          </filter>
-          <filter id="squiggly-1">
-            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" />
-          </filter>
-          
-          <filter id="squiggly-2">
-            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
-          </filter>
-          <filter id="squiggly-3">
-            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" />
-          </filter>
-          
-          <filter id="squiggly-4">
-            <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
-          </filter>
-        </defs> 
-      </svg>
+<div class=logo-container>
+<div class=fire>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</div>
+<svg xmlns=http://www.w3.org/2000/svg version=1.1 class=fire-effect width=0 height=0>
+<defs>
+<filter id=fire-blur>
+<feGaussianBlur in=SourceGraphic stdDeviation=10 result=blur />
+<feColorMatrix in=blur mode=matrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result=goo />
+<feBlend in=SourceGraphic in2=fire-blur />
+</filter>
+</defs>
+</svg>
+</div>
+<section class=heading>
+<h2>Wahid Islam</h2>
+<p>A Student, Developer & linux enthuist</p>
+</section>
+<section class=socials>
+<a href=https://discordapp.com/users/697797379583115315/ target=_blank>
+<span class=iconify data-icon=line-md:discord></span>
+</a>
+<a href=https://t.me/wahidislam target=_blank>
+<span class=iconify data-icon=line-md:telegram></span>
+</a>
+<a href=https://github.com/SimplyVoid target=_blank>
+<span class=iconify data-icon=line-md:github-loop></span>
+</a>
+<a href=https://reddit.com/u/wahidislamlinad target=_blank>
+<span class=iconify data-icon=line-md:reddit></span>
+</a>
+<a href=https://www.buymeacoffee.com/wahidislam target=_blank>
+<span class=iconify data-icon=line-md:buy-me-a-coffee-filled></span>
+</a>
+</section>
+<section class=projects>
+<h3>Projects</h3>
+<div class=project-holder>
+<a href=https://github.com/SimplyVoid/simplyvoid.github.io target=_blank>
+<div>
+<h4><span class=iconify data-icon=bx:book></span> SimplyVoid/simplyvoid.github.io</h4>
+<p>Static one page website for showcasing projects</p>
+</div>
+</a>
+</div>
+<div class=project-holder>
+<a href=https://github.com/SimplyVoid/startpage target=_blank>
+<div>
+<h4><span class=iconify data-icon=bx:book></span> SimplyVoid/Startpage</h4>
+<p>A simple yet functional startpage with responsiveness</p>
+</div>
+</a>
+</div>
+<div class=project-holder>
+<a href=https://github.com/SimplyVoid/dottermux target=_blank>
+<div>
+<h4><span class=iconify data-icon=bx:book></span> SimplyVoid/dottermux</h4>
+<p>My personal dot files for termux android terminal emulator</p>
+</div>
+</a>
+</div>
+</section>
 </body>
- <script type="text/javascript" src="index.js"></script>
+<script src=https://code.iconify.design/2/2.2.1/iconify.min.js></script>
 </html>
