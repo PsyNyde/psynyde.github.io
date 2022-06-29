@@ -4,9 +4,3 @@ console.log(`meow :3
 　l、ﾞ ~ヽ
 　じしf_, )ノ
 `)
-
-function play() {
-    const audio = document.querySelector("audio");
-    audio.volume = 0.3;
-    audio.paused ? audio.play() : audio.pause();
-    }
