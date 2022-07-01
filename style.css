@@ -1,3 +1,10 @@
+:root{
+  --fg-primary:#f0f0f0;
+  --fg-secoundary:#d0d0d0;
+  --bg-primary:#151515;
+  --bg-secoundary:#1f1f1f;
+}
+
 *,
 body {
 	margin: 0;
@@ -8,7 +15,11 @@ body {
 h2,
 h3,
 h4 {
-	color: #f0f0f0
+	color: var(--fg-primary);
+        transition    : color 0.6s ease-in-out;
+}
+body.light .socials,body.light h2,body.light h3,body.light h4 {
+  color: var(--bg-primary);
 }
 
 * {
@@ -46,8 +57,14 @@ h4 {
 .project-holder {
 	margin:.5em 0 .5em 0;
 	border-radius: 15px;
-	background: #151515;
-	box-shadow: 13px 13px 25px #0e0e0e, -13px -13px 25px #1c1c1c
+	background: var(--bg-primary);
+	box-shadow: 13px 13px 25px #0e0e0e, -13px -13px 25px #1c1c1c;
+        transition    : background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+body.light .project-holder {
+  background: var(--fg-primary);
+  box-shadow: 13px 13px 25px #cccccc, -13px -13px 25px #ffffff;
 }
 .fire,
 .fire>div {
@@ -64,10 +81,15 @@ h4 {
 }
 
 body {
-	background-color: #151515;
+	background-color: var(--bg-primary);
 	height: 100%;
 	width: 100%;
         font-family: 'Montserrat', sans-serif;
+        transition    : background-color 0.4s ease-in-out;
+}
+
+body.light{
+  background-color: var(--fg-primary)
 }
 
 .logo-container {
@@ -81,8 +103,12 @@ body {
 }
 
 p {
-	color: #d0d0d0;
-	font-size: 1rem
+	color: var(--fg-secoundary);
+	font-size: 1rem;
+        transition    : color 0.6s ease-in-out;
+}
+body.light p {
+  color: var(--bg-secoundary);
 }
 
 h2 {
@@ -93,6 +119,36 @@ h3 {
 	font-size: 1.5rem;
 	margin: .5em 0
 }
+
+.nav{
+  display:flex;
+  flex-direction:row-reverse;
+  padding: .75em 1em 0 0;
+
+}
+
+button {
+  font-size: 1.2rem;
+  color: var(--fg-secoundary);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:45px;
+  width:45px;
+  border:none;
+  border-radius: 10px;
+  background: var(--bg-primary);
+  box-shadow:  10px 10px 21px #080808,
+               -10px -10px 21px #222222;
+  transition    : background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+body.light button{
+  color: var(--bg-secoundary);
+  background: var(--fg-primary);
+  box-shadow: 10px 10px 10px #cccccc, -10px -10px 21px #ffffff;
+}
+
 
 .heading {
 	text-align: center;
