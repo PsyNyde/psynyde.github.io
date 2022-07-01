@@ -30,7 +30,7 @@ const disableDarkMode = () => {
   localStorage.setItem("darkTheme", "disabled");
 };
 
-if(theme === "enabled" || window.matchMedia('(prefers-color-scheme: dark)').matches){
+if((theme == "enabled") || (window.matchMedia('(prefers-color-scheme: dark)').matches && theme !== "disabled")){
   enableDarkMode();
 } else {
   disableDarkMode();
