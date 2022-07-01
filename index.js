@@ -15,8 +15,8 @@ const enableDarkMode = () => {
   icon.removeAttribute("data-icon");
   icon.setAttribute("data-icon","bx:sun");
 
+  localStorage.removeItem("darkTheme");
   localStorage.setItem("darkTheme", "enabled");
-  console.log('dark');
 };
 
 const disableDarkMode = () => {
@@ -26,15 +26,18 @@ const disableDarkMode = () => {
   icon.removeAttribute("data-icon");
   icon.setAttribute("data-icon","bx:moon");
 
-    localStorage.setItem("darkTheme", null);
-  console.log("white");
+  localStorage.removeItem("darkTheme");
+  localStorage.setItem("darkTheme", "disabled");
 };
 
-theme === "enabled" ? enableDarkMode() : disableDarkMode();
+if(theme === "enabled" || window.matchMedia('(prefers-color-scheme: dark)').matches){
+  enableDarkMode();
+} else {
+  disableDarkMode();
+}
 
 const changetheme = () => {
   theme = localStorage.getItem("darkTheme");
 
       theme !== "enabled" ? enableDarkMode() : disableDarkMode();
-  console.log("done");
 }
