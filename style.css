@@ -69,6 +69,12 @@ h4 {
 	box-shadow: 13px 13px 25px #0e0e0e, -13px -13px 25px #1c1c1c;
         transition    : background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
 }
+@media screen and (min-width:1200px){
+  .project-holder{
+    height:6.5em;
+    margin: 1em;
+  }
+}
 
 body.light .project-holder {
   background: var(--fg-primary);
@@ -123,7 +129,7 @@ h2 {
 
 h3 {
 	font-size: 1.5rem;
-	margin: .5em 0
+	margin: 1em;
 }
 
 .nav{
@@ -171,10 +177,14 @@ body.light button{
 
 .projects {
 	margin: 1em;
-	display: flex;
-        flex-direction:column;
-        justify-content: center;
-        padding-bottom:2.5em;
+	display: grid;
+    padding-bottom:2.5em;
+
+}
+@media screen and (min-width:1200px){
+  .projects{
+    grid-template-columns:33.33% 33.33% 33.33%;
+  }
 }
 
 .fire {
