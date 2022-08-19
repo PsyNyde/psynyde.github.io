@@ -41,3 +41,47 @@ const changetheme = () => {
 
       theme !== "enabled" ? enableDarkMode() : disableDarkMode();
 }
+
+//make repos load automatically
+
+var projects = document.querySelector('.projects')
+const repos = 'https://api.github.com/users/SimplyVoid/repos?sort=updated';
+const api = 'https://api.github.com/users/SimplyVoid';
+
+fetch(api)
+  .then(res => res.json())
+  .then(data => {
+    var followers = data.followers;
+  })
+
+fetch(repos)
+  .then(res => res.json())
+  .then(data => {
+    i = 0;
+    num = 6;
+    while (i < num) {
+      
+      repo=data[i]
+      
+      projects.innerHTML += `
+      <div class=project-holder>
+      <a href="${repo.html_url}" target=_blank>
+      <div>
+      <h4>
+      <span>
+      <span class=iconify data-icon=bx:book></span> ${repo.name}
+      </span>
+      <span class="star">${repo.stargazers_count} <span class="iconify" data-icon="fluent-emoji-high-contrast:star"></span></span>
+      </h4>
+      <p class=description>${repo.description}</p>
+      </div>
+      </a>
+      </div>
+      `;
+      i++;
+      
+    }
+  })
+
+const age = document.querySelector(".age");
+age.textContent = `${((new Date()-new Date("Novermber 10, 2003"))/31557600000).toFixed(2)}`
