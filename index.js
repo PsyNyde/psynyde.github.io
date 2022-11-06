@@ -84,4 +84,4 @@ fetch(repos)
   })
 
 const age = document.querySelector(".age");
-age.textContent = `${((new Date()-new Date("Novermber 10, 2003"))/31557600000).toFixed(2)}`
+age.textContent = `${((new Date()-new Date(2003,11,10))/31557600000).toFixed(2)}`
