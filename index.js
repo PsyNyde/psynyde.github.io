@@ -10,7 +10,7 @@ let theme= localStorage.getItem("darkTheme");
 const enableDarkMode = () => {
   document.querySelector("body").classList.remove("light");
   document.querySelector("body").classList.add("dark");
-  
+
   icon = document.getElementById("btn-icon");
   icon.removeAttribute("data-icon");
   icon.setAttribute("data-icon","bx:sun");
@@ -45,8 +45,8 @@ const changetheme = () => {
 //make repos load automatically
 
 var projects = document.querySelector('.projects')
-const repos = 'https://api.github.com/users/SimplyVoid/repos?sort=updated';
-const api = 'https://api.github.com/users/SimplyVoid';
+const repos = 'https://api.github.com/users/PsyNyde/repos?sort=updated';
+const api = 'https://api.github.com/users/PsyNyde';
 
 fetch(api)
   .then(res => res.json())
@@ -60,9 +60,9 @@ fetch(repos)
     i = 0;
     num = 6;
     while (i < num) {
-      
+
       repo=data[i]
-      
+
       projects.innerHTML += `
       <div class=project-holder>
       <a href="${repo.html_url}" target=_blank>
@@ -79,7 +79,7 @@ fetch(repos)
       </div>
       `;
       i++;
-      
+
     }
   })
 
