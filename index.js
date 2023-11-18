@@ -3,9 +3,9 @@ console.log(`meow :3
 ﾞ（ﾟ､ ｡ ７
 　l、ﾞ ~ヽ
 　じしf_, )ノ
-`)
+`);
 
-let theme= localStorage.getItem("darkTheme");
+let theme = localStorage.getItem("darkTheme");
 
 const enableDarkMode = () => {
   document.querySelector("body").classList.remove("light");
@@ -13,24 +13,34 @@ const enableDarkMode = () => {
 
   icon = document.getElementById("btn-icon");
   icon.removeAttribute("data-icon");
-  icon.setAttribute("data-icon","bx:sun");
+  icon.setAttribute(
+    "data-icon",
+    "line-md:sunny-outline-to-moon-alt-loop-transition",
+  );
 
   localStorage.removeItem("darkTheme");
   localStorage.setItem("darkTheme", "enabled");
 };
 
 const disableDarkMode = () => {
-    document.querySelector("body").classList.remove("dark");
-    document.querySelector("body").classList.add("light");
+  document.querySelector("body").classList.remove("dark");
+  document.querySelector("body").classList.add("light");
   icon = document.getElementById("btn-icon");
   icon.removeAttribute("data-icon");
-  icon.setAttribute("data-icon","bx:moon");
+  icon.setAttribute(
+    "data-icon",
+    "line-md:moon-alt-to-sunny-outline-loop-transition",
+  );
 
   localStorage.removeItem("darkTheme");
   localStorage.setItem("darkTheme", "disabled");
 };
 
-if((theme == "enabled") || (window.matchMedia('(prefers-color-scheme: dark)').matches && theme !== "disabled")){
+if (
+  theme == "enabled" ||
+  (window.matchMedia("(prefers-color-scheme: dark)").matches &&
+    theme !== "disabled")
+) {
   enableDarkMode();
 } else {
   disableDarkMode();
@@ -39,29 +49,28 @@ if((theme == "enabled") || (window.matchMedia('(prefers-color-scheme: dark)').ma
 const changetheme = () => {
   theme = localStorage.getItem("darkTheme");
 
-      theme !== "enabled" ? enableDarkMode() : disableDarkMode();
-}
+  theme !== "enabled" ? enableDarkMode() : disableDarkMode();
+};
 
 //make repos load automatically
 
-var projects = document.querySelector('.projects')
-const repos = 'https://api.github.com/users/PsyNyde/repos?sort=updated';
-const api = 'https://api.github.com/users/PsyNyde';
+var projects = document.querySelector(".projects");
+const repos = "https://api.github.com/users/PsyNyde/repos?sort=updated";
+const api = "https://api.github.com/users/PsyNyde";
 
 fetch(api)
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     var followers = data.followers;
-  })
+  });
 
 fetch(repos)
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     i = 0;
     num = 6;
     while (i < num) {
-
-      repo=data[i]
+      repo = data[i];
 
       projects.innerHTML += `
       <div class=project-holder>
@@ -79,9 +88,11 @@ fetch(repos)
       </div>
       `;
       i++;
-
     }
-  })
+  });
 
 const age = document.querySelector(".age");
-age.textContent = `${((new Date()-new Date(2003,11,10))/31557600000).toFixed(2)}`
+age.textContent = `${(
+  (new Date() - new Date(2003, 11, 10)) /
+  31557600000
+).toFixed(2)}`;

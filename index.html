@@ -1,81 +1,117 @@
-<!DOCTYPE html>
-<html lang=en>
-<head>
-<meta charset=UTF-8>
-<meta http-equiv=X-UA-Compatible content="IE=edge">
-<meta name=viewport content="width=device-width, initial-scale=1.0">
-<link rel=stylesheet href=style.css>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="manifest" href="assets/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/site.webmanifest" />
 
-<title>meow ฅ^•ﻌ•^ฅ</title>
-</head>
-<body class="dark">
- <div class="nav">
-  <button onclick="changetheme()">
-    <span id="btn-icon" class="iconify" data-icon="bx:sun"></span>
-  </button>
- </div>
-<div class=logo-container>
-<div class=fire>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-<div></div>
-</div>
-<svg xmlns=http://www.w3.org/2000/svg version=1.1 class=fire-effect width=0 height=0>
-<defs>
-<filter id=fire-blur>
-<feGaussianBlur in=SourceGraphic stdDeviation=10 result=blur />
-<feColorMatrix in=blur mode=matrix values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result=goo />
-<feBlend in=SourceGraphic in2=fire-blur />
-</filter>
-</defs>
-</svg>
-</div>
-<section class=heading>
-<h2>Wahid Islam</h2>
-<p class="info">A Student, Developer & linux enthuist & A <span class="age"></span> y/o</p>
-</section>
-<section class=socials>
-<a href=https://discordapp.com/users/697797379583115315/ target=_blank>
-<span class=iconify data-icon=line-md:discord></span>
-</a>
-<a href=https://t.me/wahidislam target=_blank>
-<span class=iconify data-icon=line-md:telegram></span>
-</a>
-<a href=https://github.com/PsyNyde target=_blank>
-<span class=iconify data-icon=line-md:github-loop></span>
-</a>
-<a href=https://reddit.com/u/wahidislamlinad target=_blank>
-<span class=iconify data-icon=line-md:reddit></span>
-</a>
-<a href=https://www.buymeacoffee.com/wahidislam target=_blank>
-<span class=iconify data-icon=line-md:buy-me-a-coffee-filled></span>
-</a>
-</section>
-<h3>Projects</h3>
+    <title>meow ฅ^•ﻌ•^ฅ</title>
+  </head>
+  <body class="dark">
+    <div class="nav">
+      <button onclick="changetheme()">
+        <span id="btn-icon" class="iconify" data-icon="bx:sun"></span>
+      </button>
+    </div>
+    <div class="logo-container">
+      <div class="fire">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        class="fire-effect"
+        width="0"
+        height="0"
+      >
+        <defs>
+          <filter id="fire-blur">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="10"
+              result="blur"
+            />
+            <feColorMatrix
+              in="blur"
+              mode="matrix"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+              result="goo"
+            />
+            <feBlend in="SourceGraphic" in2="fire-blur" />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <section class="heading">
+      <h2>Wahid Islam</h2>
+      <p class="info">
+        A Student, Developer & linux enthuist & A <span class="age"></span> y/o
+      </p>
+    </section>
+    <section class="socials">
+      <a
+        href="https://discordapp.com/users/697797379583115315/"
+        target="_blank"
+      >
+        <span class="iconify" data-icon="line-md:discord"></span>
+      </a>
+      <a href="https://t.me/wahidislam" target="_blank">
+        <span class="iconify" data-icon="line-md:telegram"></span>
+      </a>
+      <a href="https://github.com/PsyNyde" target="_blank">
+        <span class="iconify" data-icon="line-md:github-loop"></span>
+      </a>
+      <a href="https://reddit.com/u/wahidislamlinad" target="_blank">
+        <span class="iconify" data-icon="line-md:reddit"></span>
+      </a>
+      <a href="https://www.buymeacoffee.com/wahidislam" target="_blank">
+        <span class="iconify" data-icon="line-md:buy-me-a-coffee-filled"></span>
+      </a>
+    </section>
+    <h3>Projects</h3>
 
-<section class=projects> </section>
-
-</body>
-<script src=https://code.iconify.design/2/2.2.1/iconify.min.js></script>
-<script src="index.js"></script>
+    <section class="projects"></section>
+  </body>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="index.js"></script>
 </html>
